@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experimental AI system for multimodal fake news detection using text and images.">
+    <title>TruthLens AI | Fake News Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">T</span>
+            TruthLens<span class="logo-ai">AI</span>
+        </a>
+
+        <nav>
+            <a href="#analyzer">Analyzer</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#analyzer" class="nav-button">Try Analyzer ↗</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="status">
+                <span class="status-dot"></span>
+                MULTIMODAL AI ANALYZER
+            </div>
+
+            <h1>Separate facts<br>from <span>fiction.</span></h1>
+
+            <p class="hero-description">
+                Analyze news text and related images with an experimental
+                AI model designed to identify patterns associated with
+                fake and non-fake news.
+            </p>
+
+            <a href="#analyzer" class="primary-button">
+                Analyze a Story <span>↓</span>
+            </a>
+
+            <p class="hero-note">
+                Experimental predictions · Not an independent fact-check
+            </p>
+        </section>
+
+        <!-- Analyzer Section -->
+        <section class="analyzer-section" id="analyzer">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE ANALYZER</p>
+                    <h2>Check a news story</h2>
+                </div>
+                <span class="step-label">STEP 01 / ANALYZE</span>
+            </div>
+
+            <div class="analyzer-card">
+                <div class="field-group">
+                    <label for="newsText">News headline or story</label>
+                    <textarea
+                        id="newsText"
+                        placeholder="Paste your news headline or story here..."
+                        rows="5"
+                    ></textarea>
+                    <div class="field-footer">
+                        <span>Enter the text you want to analyze.</span>
+                        <span id="charCount">0 characters</span>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label>Related image</label>
+
+                    <label for="imageInput" class="upload-area" id="uploadArea">
+                        <div class="upload-icon">↑</div>
+                        <h3>Upload a related image</h3>
+                        <p>Click to browse · PNG, JPG or JPEG</p>
+                        <input
+                            type="file"
+                            id="imageInput"
+                            accept="image/png,image/jpeg,image/jpg"
+                            hidden
+                        >
+                        <img id="imagePreview" alt="Selected image preview">
+                    </label>
+                    <p class="upload-hint">
+                        Use an image related to the news story.
+                    </p>
+                </div>
+
+                <button class="analyze-button" id="analyzeButton">
+                    Analyze News <span>→</span>
+                </button>
+
+                <p class="demo-message" id="message" role="status">
+                    Enter a headline and select an image to get started.
+                </p>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="results">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">ANALYSIS REPORT</p>
+                    <h2>Model prediction</h2>
+                </div>
+                <span class="result-badge">Awaiting analysis</span>
+            </div>
+
+            <div class="result-card">
+                <div class="result-symbol">✳</div>
+                <h3 id="predictionTitle">Your result will appear here</h3>
+                <p id="predictionDescription">
+                    Submit a news story to see the model's prediction
+                    and its associated scores.
+                </p>
+
+                <div class="score-row">
+                    <div class="score-label">
+                        <span>Non-Fake score</span>
+                        <strong id="nonFakeScore">—</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill nonfake-fill" id="nonFakeBar"></div>
+                    </div>
+                </div>
+
+                <div class="score-row">
+                    <div class="score-label">
+                        <span>Fake score</span>
+                        <strong id="fakeScore">—</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill fake-fill" id="fakeBar"></div>
+                    </div>
+                </div>
+
+                <p class="disclaimer">
+                    <strong>Important:</strong> These scores reflect the
+                    model's learned patterns. They do not prove whether
+                    a news story is true or false.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <p class="eyebrow">ABOUT THE PROJECT</p>
+            <h2>Text meets visual context.</h2>
+            <p>
+                TruthLens AI is an experimental multimodal machine-learning
+                project combining text representations and image features
+                to produce a news classification prediction.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="logo">
+            <span class="logo-icon">T</span>
+            TruthLens<span class="logo-ai">AI</span>
+        </a>
+        <p>Built as an AI/ML learning project.</p>
+        <p>Experimental model · Not a fact-checking service</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

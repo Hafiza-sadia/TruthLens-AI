@@ -1,0 +1,11 @@
+
+__pycache__/
+.ipynb_checkpoints/
+.env
+*.pth
+*.pt
+*.safetensors
+*.h5
+*.pkl
+dataset/
+images_subset/
